@@ -1,9 +1,10 @@
 import CardBussines from "./components/CardBussines";
 import Delete from "./components/Delete";
 import Form from "./components/Form";
+
 function App() {
   return (
-    <div className="App">
+    <div>
       <CardBussines />
       <Delete />
       <Form />
