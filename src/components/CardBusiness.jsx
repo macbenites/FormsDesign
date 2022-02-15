@@ -8,7 +8,7 @@ import {
   Field,
 } from "../styles/reusable";
 
-const CardBussines = () => {
+export const CardBusiness = () => {
   return (
     <Card>
       <Title>Create Business</Title>
@@ -27,5 +27,3 @@ const CardBussines = () => {
     </Card>
   );
 };
-
-export default CardBussines;

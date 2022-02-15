@@ -1,14 +1,16 @@
-import CardBussines from "./components/CardBussines";
-import Delete from "./components/Delete";
-import Form from "./components/Form";
+// import CardBussines from "./components/CardBussines";
+// import Delete from "./components/Delete";
+// import Form from "./components/Form";
+import { Layout } from "./components/Layout";
 
 function App() {
   return (
-    <div>
-      <CardBussines />
+    <>
+      <Layout />
+      {/* <CardBussines />
       <Delete />
-      <Form />
-    </div>
+      <Form /> */}
+    </>
   );
 }
 

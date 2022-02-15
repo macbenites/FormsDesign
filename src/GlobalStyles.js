@@ -15,7 +15,7 @@ export const GlobalStyles = createGlobalStyle`
 
 
 html, body{
-    background-color:  rgba(0, 0, 0, 0.25);
+    //background-color:  rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
