@@ -42,13 +42,14 @@ export const content = [
 ];
 
 export const Business = () => {
-  const { t } = useTranslation();
+  const [t, i18n] = useTranslation();
 
   return (
     <BusinnessContent>
       <Item>
         <BusinessTitle>{t("Business")}</BusinessTitle>
-        <Button>{t("Create Business")}</Button>
+        <Button onClick={() => i18n.changeLanguage("en")}>Business</Button>
+        <Button onClick={() => i18n.changeLanguage("es")}>Negocios</Button>
       </Item>
       <div>
         {content.map((item, index) => (
