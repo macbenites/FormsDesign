@@ -1,12 +1,34 @@
 import { Button } from "../styles/reusable";
 import trash from "../assets/trash.svg";
 import pen from "../assets/pen.svg";
+import { useTranslation } from "react-i18next";
+import { initReactI18next } from "react-i18next";
+import i18n from "i18next";
 import {
   BusinnessContent,
   Item,
   Icons,
   BusinessTitle,
 } from "../styles/Business";
+
+const translationEs = { Business: "Negocios" };
+const translationEn = { Business: "Business" };
+
+i18n.use(initReactI18next).init({
+  resources: {
+    en: {
+      translation: translationEn,
+    },
+    es: {
+      translation: translationEs,
+    },
+  },
+  lng: "es",
+  fallbackLng: "es",
+  interpolation: {
+    escapeValue: false,
+  },
+});
 
 export const content = [
   "Pizza Hut",
@@ -20,11 +42,13 @@ export const content = [
 ];
 
 export const Business = () => {
+  const { t } = useTranslation();
+
   return (
     <BusinnessContent>
       <Item>
-        <BusinessTitle>Bussines</BusinessTitle>
-        <Button>Create Business</Button>
+        <BusinessTitle>{t("Business")}</BusinessTitle>
+        <Button>{t("Create Business")}</Button>
       </Item>
       <div>
         {content.map((item, index) => (
